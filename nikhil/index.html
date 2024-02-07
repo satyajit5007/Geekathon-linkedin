@@ -235,37 +235,35 @@ nav .wrapper .right .me i:first-child{
           <div class="right">
             <div class="home">
               <i class="fa-solid fa-house"></i>
-              <h6>Home</h6>
+              <button onclick="window.location.href='#';">Home</button>
             </div>
-            <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/myNetwork"></a>
             <div class="network">
               <i class="fa-solid fa-user-group"></i>
-              <h6>My Network</h6>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/myNetwork';">My Network</button>
             </div>
-            <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/jobs"> <div class="jobs">
-                <i class="fa-solid fa-suitcase"></i>
-                <h6>Jobs</h6>
-              </div></a>
-           
+            <div class="jobs">
+              <i class="fa-solid fa-suitcase"></i>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/jobs';">Jobs</button>
+            </div>
             <div class="message">
               <i class="fa-solid fa-message"></i>
-              <h6>Messaging</h6>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/messaging';">Messaging</button>
             </div>
             <div class="notification">
               <i class="fa-solid fa-bell"></i>
-              <h6>Notifications</h6>
+              <button onclick="window.location.href='#';">Notifications</button>
             </div>
             <div class="me">
               <i class="fa-solid fa-user"></i>
               <div class="down">
-                <h6>Me</h6>
+                <button onclick="window.location.href='#';">Me</button>
                 <i class="fa-solid fa-angle-down"></i>
               </div>
             </div>
             <div class="work">
               <i class="fa-solid fa-braille"></i>
               <div class="down">
-                <h6>Work</h6>
+                <button onclick="window.location.href='#';">Work</button>
                 <i class="fa-solid fa-angle-down"></i>
               </div>
             </div>
@@ -284,23 +282,28 @@ nav .wrapper .right .me i:first-child{
                 <br>
                 <br>
                 <h1 class="text-center">NIKHIL SINGH</h1>
-                <p class="text-center">Student at KIET Group of Institutions</p>
+                <p class="text-center font-light">Student at KIET Group of Institutions</p>
                 <br>
                 <hr>
                 
-                <div class="con flex-col px-2">
-                    <br>
-                    <h1>Connections</h1>
+                <div class="con flex  items-center gap-8 px-2 ">
+                    
+                    <div class="con ">
+                        <h1 class="font-normal">Connections</h1>
                 
-                    <h1>Connect with alumni</h1>
+                        <h1 class="font-medium">Connect with alumni</h1>
+                    </div>
+                    <div class="img">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
                     
 
                 </div>
                 
                 <hr>
-                <div class="item flex gap-3 my-4">
-                    <img src="" alt="">
-                    <h1>My items</h1>
+                <div class="item flex gap-3 my-4 px-3 items-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <h1 class="font-normal">My items</h1>
                 </div>
 
             </div>
@@ -353,176 +356,225 @@ nav .wrapper .right .me i:first-child{
 
         
             <div class="post bg-white h-auto mt-8 flex-col rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                 <div class="txt flex-col">
-                       <h2>Nikhil Singh</h2>
-                  <p>SDE-I @ Microsoft| Kiet Group</p>
-                 </div>
-                 <hr>
-                    
-
+                <div class="itm flex justify-between">
+                    <div class="in flex gap-5">
+                        <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
+                     <div class="txt flex-col">
+                           <h2 class="font-semibold">Nikhil Singh</h2>
+                      <p>SDE-I @ Microsoft| Kiet Group</p>
+    
+                     </div>
+                     
+                        
+    
+                    </div>
+                    <div class="logo flex gap-5">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <p>System Design padho ya nahi? Padho toh kitna? This question haunts every engineer at least once in their lifetime. Whether you're already in the IT sector or aspiring to be, remember, '</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[99%] h-80">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[1200px] h-80 object-cover">
                 </div>
                 <hr>
                 <div class="social flex justify-evenly">
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg"> 
+                        <i class="fa-regular fa-thumbs-up"></i>
                         <h2>Like</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-regular fa-comment"></i>
                         <h2>Comment</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-retweet"></i>
                         <h2>Repost</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-share"></i>
                         <h2>Send</h2>
                     </div>
                 </div>
 
             </div>
             <div class="post bg-white h-auto mt-8 flex-col rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                 <div class="txt flex-col">
-                       <h2>Nikhil Singh</h2>
-                  <p>SDE-I @ Microsoft| Kiet Group</p>
-                 </div>
-                    
-
+                <div class="itm flex justify-between">
+                    <div class="in flex gap-5">
+                        <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
+                     <div class="txt flex-col">
+                           <h2 class="font-semibold">Nikhil Singh</h2>
+                      <p>SDE-I @ Microsoft| Kiet Group</p>
+    
+                     </div>
+                     
+                        
+    
+                    </div>
+                    <div class="logo flex gap-5">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <p>System Design padho ya nahi? Padho toh kitna? This question haunts every engineer at least once in their lifetime. Whether you're already in the IT sector or aspiring to be, remember, '</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[99%] h-80">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[1200px] h-80 object-cover">
                 </div>
                 <hr>
                 <div class="social flex justify-evenly">
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg"> 
+                        <i class="fa-regular fa-thumbs-up"></i>
                         <h2>Like</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-regular fa-comment"></i>
                         <h2>Comment</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-retweet"></i>
                         <h2>Repost</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-share"></i>
                         <h2>Send</h2>
                     </div>
                 </div>
 
             </div>
             <div class="post bg-white h-auto mt-8 flex-col rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                 <div class="txt flex-col">
-                       <h2>Nikhil Singh</h2>
-                  <p>SDE-I @ Microsoft| Kiet Group</p>
-                 </div>
-                    
-
+                <div class="itm flex justify-between">
+                    <div class="in flex gap-5">
+                        <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
+                     <div class="txt flex-col">
+                           <h2 class="font-semibold">Nikhil Singh</h2>
+                      <p>SDE-I @ Microsoft| Kiet Group</p>
+    
+                     </div>
+                     
+                        
+    
+                    </div>
+                    <div class="logo flex gap-5">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <p>System Design padho ya nahi? Padho toh kitna? This question haunts every engineer at least once in their lifetime. Whether you're already in the IT sector or aspiring to be, remember, '</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[99%] h-80">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[1200px] h-80 object-cover">
                 </div>
                 <hr>
                 <div class="social flex justify-evenly">
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg"> 
+                        <i class="fa-regular fa-thumbs-up"></i>
                         <h2>Like</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-regular fa-comment"></i>
                         <h2>Comment</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-retweet"></i>
                         <h2>Repost</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-share"></i>
                         <h2>Send</h2>
                     </div>
                 </div>
 
             </div>
             <div class="post bg-white h-auto mt-8 flex-col rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                 <div class="txt flex-col">
-                       <h2>Nikhil Singh</h2>
-                  <p>SDE-I @ Microsoft| Kiet Group</p>
-                 </div>
-                    
-
+                <div class="itm flex justify-between">
+                    <div class="in flex gap-5">
+                        <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
+                     <div class="txt flex-col">
+                           <h2 class="font-semibold">Nikhil Singh</h2>
+                      <p>SDE-I @ Microsoft| Kiet Group</p>
+    
+                     </div>
+                     
+                        
+    
+                    </div>
+                    <div class="logo flex gap-5">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <p>System Design padho ya nahi? Padho toh kitna? This question haunts every engineer at least once in their lifetime. Whether you're already in the IT sector or aspiring to be, remember, '</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[99%] h-80">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[1200px] h-80 object-cover">
                 </div>
                 <hr>
                 <div class="social flex justify-evenly">
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg"> 
+                        <i class="fa-regular fa-thumbs-up"></i>
                         <h2>Like</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-regular fa-comment"></i>
                         <h2>Comment</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-retweet"></i>
                         <h2>Repost</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-share"></i>
                         <h2>Send</h2>
                     </div>
                 </div>
 
             </div>
             <div class="post bg-white h-auto mt-8 flex-col rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                 <div class="txt flex-col">
-                       <h2>Nikhil Singh</h2>
-                  <p>SDE-I @ Microsoft| Kiet Group</p>
-                 </div>
-                    
-
+                <div class="itm flex justify-between">
+                    <div class="in flex gap-5">
+                        <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
+                     <div class="txt flex-col">
+                           <h2 class="font-semibold">Nikhil Singh</h2>
+                      <p>SDE-I @ Microsoft| Kiet Group</p>
+    
+                     </div>
+                     
+                        
+    
+                    </div>
+                    <div class="logo flex gap-5">
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                        
+                    </div>
                 </div>
                 <div class="content">
                     <p>System Design padho ya nahi? Padho toh kitna? This question haunts every engineer at least once in their lifetime. Whether you're already in the IT sector or aspiring to be, remember, '</p>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[99%] h-80">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_pzP3zSnmveksm78dtUxwbZ-ak6pnTv3W1Q&usqp=CAU" alt="" class="w-[1200px] h-80 object-cover">
                 </div>
                 <hr>
                 <div class="social flex justify-evenly">
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg"> 
+                        <i class="fa-regular fa-thumbs-up"></i>
                         <h2>Like</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-regular fa-comment"></i>
                         <h2>Comment</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-retweet"></i>
                         <h2>Repost</h2>
                     </div>
-                    <div class="itm">
-                        <img src="" alt="">
+                    <div class="itm flex items-center gap-2 px-4 py-2 hover:bg-slate-200 rounded-lg">
+                        <i class="fa-solid fa-share"></i>
                         <h2>Send</h2>
                     </div>
                 </div>
@@ -534,17 +586,17 @@ nav .wrapper .right .me i:first-child{
         </div>
         <div class="right  space-y-5">
             <div class="card bg-white h-auto w-72 px-6 rounded-md py-4 ">
-                <h1>Linkedln News</h1>
+                <h1 class="font-semibold">Linkedln News</h1>
                 <ul  class="list-disc space-y-3">
-                    <li>Top News Letters Of The Week <p>Top News ,238 readers</p></li>
+                    <li class="font-semibold">Top News Letters Of The Week <p class="font-light">Top News ,238 readers</p></li>
                     
-                    <li>Top News Letters Of The Week <p>Top News ,238 readers</p></li>
+                    <li class="font-semibold">Top News Letters Of The Week <p class="font-light">Top News ,238 readers</p></li>
                     
-                    <li>Top News Letters Of The Week <p>Top News ,238 readers</p></li>
+                    <li class="font-semibold">Top News Letters Of The Week <p class="font-light">Top News ,238 readers</p></li>
                     
-                    <li>Top News Letters Of The Week<p>Top News ,238 readers</p></li>
+                    <li class="font-semibold">Top News Letters Of The Week<p class="font-light">Top News ,238 readers</p></li>
                     
-                    <li>Top News Letters Of The Week<p>Top News ,238 readers</p></li>
+                    <li class="font-semibold">Top News Letters Of The Week<p class="font-light">Top News ,238 readers</p></li>
                
                 </ul>
             </div>
@@ -557,6 +609,121 @@ nav .wrapper .right .me i:first-child{
                    <button class="border rounded-xl w-32 text-blue-700">FOLLOW</button>
                 </div>
             </div>
+
+            <div class="flex-col items-center top-16  rounded-md sticky top-96">
+                <div class="flex justify-evenly  mt-2">
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">About</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">Accessibility</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">Help Center</span>
+                    </a>
+                  </div>
+                </div>
+    
+                <div class="flex justify-evenly  mt-2">
+                  <div class="flex">
+                    <div>
+                      <a href="#">
+                        <span class="opacity-55 text-sm">Privacy & Terms</span>
+                      </a>
+                    </div>
+    
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">Ad Choises</span>
+                    </a>
+                  </div>
+                </div>
+    
+                <div class="flex justify-center  mt-2">
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">Advertising</span>
+                    </a>
+                  </div>
+                  <div class="flex">
+                    <div>
+                      <a href="#">
+                        <span class="opacity-55 text-sm">Busines Services</span>
+                      </a>
+                    </div>
+    
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="flex justify-evenly mt-2">
+                  <div>
+                    <a href="#">
+                      <span class="opacity-55 text-sm">Get the LinkedIn app</span>
+                    </a>
+                  </div>
+                  <div>
+                    <span class="opacity-55 text-sm">more</span>
+                  </div>
+                </div>
+    
+                <div class="flex gap-1 justify-start mt-3">
+                  <svg
+                    role="img"
+                    aria-hidden="false"
+                    aria-label="LinkedIn"
+                    class="global-footer-compact__linkedin-logo"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="56"
+                    height="14"
+                    viewBox="0 0 56 14"
+                    data-supported-dps="56x14"
+                    data-test-icon="linkedin-logo-blue-xxsmall"
+                  >
+                    <image
+                      href="https://static.licdn.com/aero-v1/sc/h/aahlc8ivbnmk0t3eyz8as5gvr"
+                      width="56"
+                      height="14"
+                    ></image>
+                  </svg>
+                  <span class="opacity-55 text-sm"
+                    >LinkedIn Corporation © 2024</span
+                  >
+                </div>
+              </div>
 
 
         </div>
