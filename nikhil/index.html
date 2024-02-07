@@ -6,70 +6,273 @@
     <title>linkdln</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        
+nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem 4rem;
+    background: #fff;
+}
+
+nav .wrapper .left,
+nav .wrapper .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .wrapper .left{
+    padding-left: 3rem;
+    display: flex;
+    gap: 0.7rem;
+}
+
+nav .wrapper .logo i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #0a66c2;
+}
+
+nav .wrapper .left .input{
+    background: rgb(237, 245, 246);
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+nav .wrapper .left .input input[type='search']{
+    width: 15rem;
+    border: none;
+    background: transparent;
+}
+
+nav .wrapper .left .input input[type='search']::placeholder{
+    font-size: 0.8rem;
+    color: rgb(49, 49, 49);
+    font-weight: 100;
+}
+
+nav .wrapper .left .input i{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .me,
+nav .wrapper .right .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network:hover,
+nav .wrapper .right .jobs:hover,
+nav .wrapper .right .message:hover,
+nav .wrapper .right .notification:hover,
+nav .wrapper .right .me .down:hover,
+nav .wrapper .right .work .down:hover{
+    color: #000;
+}
+
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .work{
+    color: gray;
+}
+
+nav .wrapper .right .home i,
+nav .wrapper .right .network i,
+nav .wrapper .right .jobs i,
+nav .wrapper .right .message i,
+nav .wrapper .right .notification i{
+    font-size: 1.2rem;
+}
+
+
+nav .wrapper .right .me .down,
+nav .wrapper .right .work .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: gray;
+}
+nav .wrapper .right .me i:first-child{
+    background: gray;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+ .media{
+    background: #fff;
+    height: 20vh;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+}
+
+.media .search{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+ .media .search img{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ .media .search input{
+    border-radius: 5rem;
+    border: 1px solid gray;
+    width: 100%;
+    padding: 0 1.2rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+ .media .search input:hover{
+    background: rgb(233, 233, 233);
+}
+
+ .media .posts{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+}
+
+ .media .posts .post{
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0.5rem;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+ .media .posts .post h5{
+    font-weight: 400;
+}
+
+ .media .posts .post:nth-child(1) i{
+    color: #0a66c2;
+}
+ .media .posts .post:nth-child(2) i{
+    color: #19c20a;
+}
+.media .posts .post:nth-child(3) i{
+    color: #3187dd;
+}
+ .media .posts .post:nth-child(4) i{
+    color: #c20ab9;
+}
+
+ .media .posts .post:hover{
+    background: rgb(235, 235, 235);
+    border-radius: 0.2rem;
+}
+    </style>
     
 </head>
 <body class="bg-[#F4F2ED]">
-<nav class="flex justify-evenly items-center sticky top-0 z-10 bg-white border-b h-14  mb-5">
-    <div class="right flex justify-center items-center">
-        <img src="https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png" class="w-20 h-20">
-        <input type="text" name="" id="" disabled placeholder="?" class="h-8 w-3">
-    <input type="text" id="search" placeholder="Search" class="h-8">
-    </div>
-    <div class="left flex gap-10 top-0 sticky">
-        <div class="home group cursor-pointer">
-            <img src="" alt="">
-            <p>Home</p>
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-    
+    <nav class="">
+        <div class="wrapper">
+          <div class="left">
+            <div class="logo">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="search"
+                placeholder="Search for job, Skills & Companies..."
+              />
+            </div>
+          </div>
+          <div class="right">
+            <div class="home">
+              <i class="fa-solid fa-house"></i>
+              <h6>Home</h6>
+            </div>
+            <div class="network">
+              <i class="fa-solid fa-user-group"></i>
+              <h6>My Network</h6>
+            </div>
+            <div class="jobs">
+              <i class="fa-solid fa-suitcase"></i>
+              <h6>Jobs</h6>
+            </div>
+            <div class="message">
+              <i class="fa-solid fa-message"></i>
+              <h6>Messaging</h6>
+            </div>
+            <div class="notification">
+              <i class="fa-solid fa-bell"></i>
+              <h6>Notifications</h6>
+            </div>
+            <div class="me">
+              <i class="fa-solid fa-user"></i>
+              <div class="down">
+                <h6>Me</h6>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <div class="work">
+              <i class="fa-solid fa-braille"></i>
+              <div class="down">
+                <h6>Work</h6>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <a href="#">Try Premium for free</a>
+          </div>
         </div>
-        <div class="network group cursor-pointer">
-            <img src="" alt="">
-            <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/"> <p>My Network</p></a>
-           
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-            
-        </div>
-        <div class="jobs group cursor-pointer">
-            <img src="" alt="">
-            <p>Jobs</p>
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-    
-        </div>
-        <div class="msg group cursor-pointer ">
-    
-            <img src="" alt="">
-            <p>Messages</p>
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-    
-        </div>
-        <div class="noti group cursor-pointer">
-            <img src="" alt="">
-            <p>Notifications</p>
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-    
-        </div>
-        <div class="me group cursor-pointer">
-    
-            <img src="" alt="">
-            <p>Me</p>
-            <div class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100" ></div>
-    
-        </div>
-        <div class="line">
-    
-        </div>
-        <div class="bus">
-    
-    
-        </div>
-        <div class="pre">
-    
-        </div>
-    </div>
+      </nav>
 
-</nav>
-
-<main class="flex justify-center bg-[#F4F2ED] ">
+<main class="flex justify-center bg-[#F4F2ED] mt-10 ">
     <div class="container flex w-9/12 justify-between gap-5">
         <div class="left flex-col justify-center items-center space-y-5">
             <div class="card rounded-md w-60 flex-col items-center font-bold relative overflow-hidden border bg-white">
@@ -121,25 +324,29 @@
 
         </div>
         <div class="mid flex-col gap-16 w-[620px] ">
-            <div class="post flex-col bg-white rounded-md px-5 py-5 space-y-2">
-                <div class="in flex gap-5">
-                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="" class="rounded-full w-14 h">
-                    <input type="text" class="rounded-3xl w-[95%] border" >
-
+            <div class="media mt-0">
+                <div class="search">
+                    <img src="https://pics.craiyon.com/2023-10-23/903eec12f88642079733f99cf3e1eb17.webp" alt="">
+                    <input type="search" placeholder="Start a post">
                 </div>
-                <div class="menus flex justify-evenly ">
-                    <div class="itm hover:bg-slate-300  w-20 h-11 flex items-center justify-center rounded-xl">
-                        <img src="" alt=""><p>Media</p>
-                    </div>
-                   <div class="itm  hover:bg-slate-300   w-20 h-11 flex items-center justify-center rounded-xl">
-                     <img src="" alt=""><p>Media</p>
-                    
-                   </div>
-                    <div class="itm  hover:bg-slate-300   w-24 h-11 flex items-center justify-center rounded-xl">
-                        <img src="" alt=""><p>Write Article</p>
-                    </div>
+                <div class="posts">
+                <div class="post flex items-center">
+                    <i class="fa-solid fa-image"></i>
+                    <h5>Photo</h5>
                 </div>
-
+                <div class="post flex items-center">
+                    <i class="fa-solid fa-video"></i>
+                    <h5>Video</h5>
+                </div>
+                <div class="post flex items-center">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h5>Job</h5>
+                </div>
+                <div class="post flex items-center">
+                    <i class="fa-solid fa-pen"></i>
+                    <h5>Write Article</h5>
+                </div>
+            </div>
             </div>
 
         
