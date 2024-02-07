@@ -6,76 +6,199 @@
     <title>MyNetwork</title>
     <link rel="stylesheet" href="main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem 4rem;
+    background: #fff;
+}
+
+nav .wrapper .left,
+nav .wrapper .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .wrapper .left{
+    padding-left: 3rem;
+    display: flex;
+    gap: 0.7rem;
+}
+
+nav .wrapper .logo i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #0a66c2;
+}
+
+nav .wrapper .left .input{
+    background: rgb(237, 245, 246);
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+nav .wrapper .left .input input[type='search']{
+    width: 15rem;
+    border: none;
+    background: transparent;
+}
+
+nav .wrapper .left .input input[type='search']::placeholder{
+    font-size: 0.8rem;
+    color: rgb(49, 49, 49);
+    font-weight: 100;
+}
+
+nav .wrapper .left .input i{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .me,
+nav .wrapper .right .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network:hover,
+nav .wrapper .right .jobs:hover,
+nav .wrapper .right .message:hover,
+nav .wrapper .right .notification:hover,
+nav .wrapper .right .me .down:hover,
+nav .wrapper .right .work .down:hover{
+    color: #000;
+}
+
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .work{
+    color: gray;
+}
+
+nav .wrapper .right .home i,
+nav .wrapper .right .network i,
+nav .wrapper .right .jobs i,
+nav .wrapper .right .message i,
+nav .wrapper .right .notification i{
+    font-size: 1.2rem;
+}
+
+
+nav .wrapper .right .me .down,
+nav .wrapper .right .work .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: gray;
+}
+nav .wrapper .right .me i:first-child{
+    background: gray;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+    </style>
+
   </head>
+
   <body class="bg-[#F4F2ED]">
-    <nav
-      class="flex justify-evenly items-center sticky top-0 z-10 bg-white border-b h-14 mb-5"
-    >
-      <div class="right flex justify-center items-center">
-        <img
-          src="https://cdn2.iconfinder.com/data/icons/popular-social-media-flat/48/Popular_Social_Media-22-512.png"
-          class="w-20 h-20"
-        />
-        <input
-          type="text"
-          name=""
-          id=""
-          disabled
-          placeholder="?"
-          class="h-8 w-3"
-        />
-        <input type="text" id="search" placeholder="Search" class="h-8" />
-      </div>
-      <div class="left flex gap-10 top-0 sticky">
-        <div class="home group cursor-pointer">
-          <img src="" alt="" />
-          <p>Home</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
+    <nav class="">
+      <div class="wrapper">
+        <div class="left">
+          <div class="logo">
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <div class="input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="search"
+              placeholder="Search for job, Skills & Companies..."
+            />
+          </div>
         </div>
-        <div class="network group cursor-pointer">
-          <img src="" alt="" />
-          <p>My Network</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
+        <div class="right">
+          <div class="home">
+            <i class="fa-solid fa-house"></i>
+            <h6>Home</h6>
+          </div>
+          <div class="network">
+            <i class="fa-solid fa-user-group"></i>
+            <h6>My Network</h6>
+          </div>
+          <div class="jobs">
+            <i class="fa-solid fa-suitcase"></i>
+            <h6>Jobs</h6>
+          </div>
+          <div class="message">
+            <i class="fa-solid fa-message"></i>
+            <h6>Messaging</h6>
+          </div>
+          <div class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <h6>Notifications</h6>
+          </div>
+          <div class="me">
+            <i class="fa-solid fa-user"></i>
+            <div class="down">
+              <h6>Me</h6>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="work">
+            <i class="fa-solid fa-braille"></i>
+            <div class="down">
+              <h6>Work</h6>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <a href="#">Try Premium for free</a>
         </div>
-        <div class="jobs group cursor-pointer">
-          <img src="" alt="" />
-          <p>Jobs</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-        <div class="msg group cursor-pointer">
-          <img src="" alt="" />
-          <p>Messages</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-        <div class="noti group cursor-pointer">
-          <img src="" alt="" />
-          <p>Notifications</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-        <div class="me group cursor-pointer">
-          <img src="" alt="" />
-          <p>Me</p>
-          <div
-            class="line w-full h-1 bg-black opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-        <div class="line"></div>
-        <div class="bus"></div>
-        <div class="pre"></div>
       </div>
     </nav>
 
-    <main class="flex justify-center bg-[#F4F2ED]">
+
+    <main class="flex justify-center bg-[#F4F2ED] mt-10">
       <div class="container flex w-9/12 justify-between gap-5">
         <div class="left flex-col justify-center items-center space-y-5">
           <div class="card rounded-md w-80 flex-col items-center font-bold relative overflow-hidden border bg-white">
@@ -415,9 +538,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin//adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin//adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -437,9 +560,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin//adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -459,9 +582,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -481,9 +604,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -503,9 +626,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -525,9 +648,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -547,9 +670,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -569,9 +692,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -591,9 +714,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -613,9 +736,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -635,9 +758,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
@@ -657,9 +780,9 @@
               <div
                 class="card rounded-md w-56 relative overflow-hidden border bg-white"
               >
-                <img src="/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
+                <img src="/Geekathon-linkedin/adarsh/images/luca-bravo-9l_326FISzk-unsplash.jpg" alt="" />
                 <img
-                  src="/images/istockphoto-1186079153-1024x1024.jpg"
+                  src="/Geekathon-linkedin/adarsh/images/istockphoto-1186079153-1024x1024.jpg"
                   alt=""
                   class="rounded-full absolute top-16 left-[29%] border-solid-white w-28"
                 />
