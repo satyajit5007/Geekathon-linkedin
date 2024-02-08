@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedln</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+   
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        .nav-container {
+  justify-content: space-between;
+  padding-block: 12px 16px;
+}
+.nav-company-logo icon {
+  display: flex;
+  width: 135px;
+  height: 34px;
+}
+.nav-company-logo icon svg {
+  color: var(--blue-color);
+}
+
+.list-1::after {
+  background-color: var(--grey-light-color);
+  width: 1px;
+  height: 34px;
+  content: "";
+  margin-inline: 8px;
+}
+.link {
+  width: 64px;
+  height: 52px;
+  color: var(--grey-light-color);
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: 8px;
+}
+.link span {
+  font-size: var(--xs-small-size);
+  font-weight: var(--font-weight-normal-heading);
+}
+.link:hover {
+  color: var(--grey-deep-dark-color);
+}
+.list-2 {
+  gap: 8px;
+}
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.blue-button {
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: 24px;
+  min-height: 48px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: var(--font-weight-heading);
+  font-size: var(--x-small-size);
+  text-align: center;
+  background: var(--blue-color);
+}
+.blue-button:hover {
+  box-shadow: 0 0 1px var(--blue-hover-color);
+  background-color: var(--blue-hover-color);
+}
+
+.blue-border-button {
+  padding: var(--btn-padding);
+  border: 1px solid var(--blue-color);
+  min-height: 48px;
+  border-radius: 24px;
+  cursor: pointer;
+  color: var(--blue-color);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--x-small-size);
+  text-align: center;
+}
+.blue-border-button:hover {
+  background-color: #0a66c211;
+}
+
+.transparent-button {
+  padding: var(--btn-padding);
+  min-height: 48px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  color: var(--grey-dark-color);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--x-small-size);
+  text-align: center;
+}
+.transparent-button:hover {
+  background-color: var(--light-bluish-shade);
+  color: var(--grey-deep-dark-color);
+}
+
+.grey-border-button {
+  min-height: 48px;
+  padding: var(--btn-padding);
+  border: 1px solid var(--grey-light-color);
+  border-radius: 24px;
+  cursor: pointer;
+  color: var(--grey-light-color);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--x-small-size);
+  text-align: center;
+}
+.grey-border-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+:root {
+  --blue-color: #0a66c2;
+  --blue-hover-color: #004182;
+
+  /* text color */
+  --grey-light-color: rgba(0, 0, 0, 0.6);
+  --grey-dark-color: rgba(0, 0, 0, 0.75);
+  --grey-deep-dark-color: rgba(0, 0, 0, 0.9);
+  --brown-color: #b24020;
+  --brown-light-color: #8f5849;
+
+  /* background normal or hover colors */
+  --light-bluish-shade: #f3f2f0;
+  --light-purple-shade: #f1ece5;
+  --light-purple-darker-shade: #eae6df;
+
+  --light-on-hover-blue-shade: rgba(0, 0, 0, 0.4);
+
+  /* Font sizes */
+  --large-size: 56px;
+  --medium-size: 48px;
+  --x-medium-size: 40px;
+  --xs-medium-size: 32px;
+  --small-size: 20px;
+  --x-small-size: 16px;
+  --xs-small-size: 14px;
+  --xsl-small-size: 12px;
+
+  /* padding for button */
+  --btn-padding: 12px 24px;
+
+  /* font-weights */
+  --font-weight-heading: 600;
+  --font-weight-normal-heading: 400;
+  --font-weight-light-heading: 200;
+}
+
+.footer-2-container {
+  min-height: 50px;
+}
+.footer-2-icon {
+  display: flex;
+  width: 56px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.footer-2-list li {
+  padding: 8px;
+}
+.footer-2-list li span {
+  font-size: var(--xsl-small-size);
+  color: var(--grey-light-color);
+  font-weight: var(--font-weight-normal-heading);
+}
+.footer-2-list li a {
+  color: var(--grey-light-color);
+  font-size: var(--xsl-small-size);
+  font-weight: var(--font-weight-heading);
+}
+.footer-2-list li a:hover {
+  color: var(--blue-hover-color);
+  text-decoration: underline;
+}
+#footer-1 {
+  position: relative;
+}
+#footer-1::after {
+  display: block;
+  width: 100vw;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: var(--light-bluish-shade);
+}
+.footer-1-container {
+  padding-top: 24px;
+  padding-bottom: 22px;
+  justify-content: space-between;
+  align-items: self-start;
+}
+.footer-1-icon {
+  display: inline-block;
+  width: 84px;
+  height: 21px;
+  color: var(--blue-color);
+}
+.footer-1-icon svg {
+  height: fit-content;
+}
+#footer-list-1,
+#footer-list-2,
+#footer-list-3,
+#footer-list-4 {
+  flex-basis: 192px;
+}
+.footer-list-heading {
+  font-size: var(--x-small-size);
+  font-weight: var(--font-weight-heading);
+  margin-bottom: 8px;
+}
+.footer-list {
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-list a {
+  width: 100%;
+  height: 100%;
+  color: var(--grey-light-color);
+  font-size: var(--xs-small-size);
+  font-weight: var(--font-weight-heading);
+}
+.footer-list a:hover {
+  color: var(--blue-color);
+  text-decoration: underline;
+}
+.sign-in-btn {
+  width: 100%;
+  margin-block: 8px;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav id="navigation-bar">
+        <div class="container flex nav-container">
+            <div class="nav-company-logo">
+                <icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 84 21" preserveAspectRatio="xMinYMin meet" version="1.1" focusable="false" aria-busy="false">
+                        <g class="inbug" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <path d="M19.479,0 L1.583,0 C0.727,0 0,0.677 0,1.511 L0,19.488 C0,20.323 0.477,21 1.333,21 L19.229,21 C20.086,21 21,20.323 21,19.488 L21,1.511 C21,0.677 20.336,0 19.479,0" class="bug-text-color" transform="translate(63.000000, 0.000000)"></path>
+                          <path d="M82.479,0 L64.583,0 C63.727,0 63,0.677 63,1.511 L63,19.488 C63,20.323 63.477,21 64.333,21 L82.229,21 C83.086,21 84,20.323 84,19.488 L84,1.511 C84,0.677 83.336,0 82.479,0 Z M71,8 L73.827,8 L73.827,9.441 L73.858,9.441 C74.289,8.664 75.562,7.875 77.136,7.875 C80.157,7.875 81,9.479 81,12.45 L81,18 L78,18 L78,12.997 C78,11.667 77.469,10.5 76.227,10.5 C74.719,10.5 74,11.521 74,13.197 L74,18 L71,18 L71,8 Z M66,18 L69,18 L69,8 L66,8 L66,18 Z M69.375,4.5 C69.375,5.536 68.536,6.375 67.5,6.375 C66.464,6.375 65.625,5.536 65.625,4.5 C65.625,3.464 66.464,2.625 67.5,2.625 C68.536,2.625 69.375,3.464 69.375,4.5 Z" class="background" fill="currentColor"></path>
+                        </g>
+                        <g class="linkedin-text">
+                          <path d="M60,18 L57.2,18 L57.2,16.809 L57.17,16.809 C56.547,17.531 55.465,18.125 53.631,18.125 C51.131,18.125 48.978,16.244 48.978,13.011 C48.978,9.931 51.1,7.875 53.725,7.875 C55.35,7.875 56.359,8.453 56.97,9.191 L57,9.191 L57,3 L60,3 L60,18 Z M54.479,10.125 C52.764,10.125 51.8,11.348 51.8,12.974 C51.8,14.601 52.764,15.875 54.479,15.875 C56.196,15.875 57.2,14.634 57.2,12.974 C57.2,11.268 56.196,10.125 54.479,10.125 L54.479,10.125 Z" fill="currentColor"></path>
+                          <path d="M47.6611,16.3889 C46.9531,17.3059 45.4951,18.1249 43.1411,18.1249 C40.0001,18.1249 38.0001,16.0459 38.0001,12.7779 C38.0001,9.8749 39.8121,7.8749 43.2291,7.8749 C46.1801,7.8749 48.0001,9.8129 48.0001,13.2219 C48.0001,13.5629 47.9451,13.8999 47.9451,13.8999 L40.8311,13.8999 L40.8481,14.2089 C41.0451,15.0709 41.6961,16.1249 43.1901,16.1249 C44.4941,16.1249 45.3881,15.4239 45.7921,14.8749 L47.6611,16.3889 Z M45.1131,11.9999 C45.1331,10.9449 44.3591,9.8749 43.1391,9.8749 C41.6871,9.8749 40.9121,11.0089 40.8311,11.9999 L45.1131,11.9999 Z" fill="currentColor"></path>
+                          <polygon fill="currentColor" points="38 8 34.5 8 31 12 31 3 28 3 28 18 31 18 31 13 34.699 18 38.241 18 34 12.533"></polygon>
+                          <path d="M16,8 L18.827,8 L18.827,9.441 L18.858,9.441 C19.289,8.664 20.562,7.875 22.136,7.875 C25.157,7.875 26,9.792 26,12.45 L26,18 L23,18 L23,12.997 C23,11.525 22.469,10.5 21.227,10.5 C19.719,10.5 19,11.694 19,13.197 L19,18 L16,18 L16,8 Z" fill="currentColor"></path>
+                          <path d="M11,18 L14,18 L14,8 L11,8 L11,18 Z M12.501,6.3 C13.495,6.3 14.3,5.494 14.3,4.5 C14.3,3.506 13.495,2.7 12.501,2.7 C11.508,2.7 10.7,3.506 10.7,4.5 C10.7,5.494 11.508,6.3 12.501,6.3 Z" fill="currentColor"></path>
+                          <polygon fill="currentColor" points="3 3 0 3 0 18 9 18 9 15 3 15"></polygon>
+                        </g>
+                    </svg>
+                </icon>
+            </div>
+            <div class="nav-links flex">
+                <div class="list-1 flex">
+                    <a class="link flex" id="link-1" href="https://nikhil-kiet.github.io/Geekathon-linkedin/nikhil/articles">
+                        <svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 20 17" focusable="false" class="lazy-loaded" aria-busy="false">
+                            <path
+                                d="m11 9.5h5v1h-5v-1zm5-5h-12v3h12v-3zm-5 8h5v-1h-5v1zm9-12v13c0 1.657-1.343 3-3 3h-14c-1.657 0-3-1.343-3-3v-13h20zm-2 2h-16v11c0 0.552 0.449 1 1 1h14c0.551 0 1-0.448 1-1v-11zm-9 7h-5v3h5v-3z"
+                                fill="currentColor" fill-opacity=".9" />
+                        </svg>
+                        <span>Articles</span>
+                    </a>
+                    <a class="link flex" id="link-2" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24px" fill="none" focusable="false"
+                            class="lazy-loaded" aria-busy="false">
+                            <path
+                                d="M9 14v6H0v-6c0-1.7 1.3-3 3-3h3c1.7 0 3 1.3 3 3Zm5.5-3c1.9 0 3.5-1.6 3.5-3.5S16.4 4 14.5 4 11 5.6 11 7.5s1.6 3.5 3.5 3.5Zm1 2h-2c-1.4 0-2.5 1.1-2.5 2.5V20h7v-4.5c0-1.4-1.1-2.5-2.5-2.5ZM4.5 0C2 0 0 2 0 4.5S2 9 4.5 9 9 7 9 4.5 7 0 4.5 0Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>People</span>
+                    </a>
+                    <a class="link flex" id="link-3" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" focusable="false"
+                            class="lazy-loaded" aria-busy="false">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M23 3H1a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1ZM2 19h20V5H2v14Z"
+                                fill="currentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4 9h6V7H4v2Zm0 4h6v-2H4v2Zm0 4h6v-2H4v2Zm-2 2h10V5H2v14Z" fill="currentColor"
+                                fill-opacity=".25" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14 9h6V7h-6v2Zm0 4h6v-2h-6v2Zm6 4h-6v-2h6v2Z" fill="currentColor"
+                                fill-opacity=".6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10 7.534v8.933a.28.28 0 0 0 .439.23l6.433-4.436A.307.307 0 0 0 17 12a.305.305 0 0 0-.128-.26l-6.433-4.437a.28.28 0 0 0-.439.23Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Learning</span>
+                    </a>
+                    <a class="link flex" id="link-4" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24px" fill="none" focusable="false"
+                            class="lazy-loaded" aria-busy="false">
+                            <path
+                                d="M15 4V3c0-1.7-1.3-3-3-3H8C6.3 0 5 1.3 5 3v1H0v4c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3V4h-5ZM7 3c0-.6.4-1 1-1h4c.6 0 1 .4 1 1v1H7V3Zm10 9c1.2 0 2.3-.5 3-1.4V15c0 1.7-1.3 3-3 3H3c-1.7 0-3-1.3-3-3v-4.4c.7.9 1.8 1.4 3 1.4h14Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span>Jobs</span>
+                    </a>
+                </div>
+                <div class="list-2 flex">
+                    <a href="#" class="transparent-button" id="link-5">Join now</a>
+                    <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/nikhil/" class="blue-border-button" id="link-6">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="space-y-8">
+        <div class="left flex justify-center gap-10 overflow-y-visible ">
+            <div class="cont flex-col w-[45%] pl-6 items-center">
+                <h1 class="text-amber-800 font-extralight text-6xl ">Welcome to your professional community</h1>
+                <br>
+                <form class="flex-col h-[300px] ">
+                    <label for="email" class="block mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 mb-4 border rounded" required>
+
+                    <label for="password" class="block mb-2">Password:</label>
+                    <input type="password" id="password" name="password" class="w-full p-2 mb-4 border rounded" required>
+                    <br>
+                    <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/nikhil/" class="block mt-2 text-blue-500 text-sm">Forgot Password?</a>
+                    <br>
+
+                    <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/nikhil/" class="blue-button sign-in-btn w-[700px]">Sign in</a>
+                </form>
+                <p>or
+
+                    By clicking Continue, you agree to LinkedIn’s User Agreement, Privacy Policy, and Cookie Policy.</p>
+                <br>
+                <a href="https://nikhil-kiet.github.io/Geekathon-linkedin/nikhil/" class="border py-2 px-4 rounded-full text-lg font-medium">New to LinkedIn | Join Now</a>
+            </div>
+            <div class="right">
+                <img class="w-[700px] h-[560px]" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW8nr9vksQPFSWDDMWrWbl9HCT7g1SKoC7q67DzU1ft_xGkZ5RNmmgycXbcx0LmC33YwWfRCJf9UvAQXkkF3wXOITCJdMCCouzd1ZOJgA3qs88L_B4QhoEQHMxtGuGDPOWw5oVCsiHJojuHLsH6eqPOD7lYLqivE6K0BKtCffpTUI0AiqptH1i6GBBdRo/s320/AAYAAgSrAAgAAQAAAAAAAGM6w-NyPk-_SVikYiCJ6V3Z-Q.png" alt="">
+            </div>
+        </div>
+        <div class="grey bg-[#F3F2F0] w-screen h-[350px] flex justify-center pt-[4%]">
+            <div class="cont w-[90%] flex ">
+                <div class="left w-[500px] pb-8 space-y-6">
+                    <h1 class="text-5xl font-extralight space-y-3">Explore collaborative <br> articles</h1>
+                    <p class="text-xl font-thin space-y-3">We’re unlocking community knowledge in a new <br>way. Experts add insights directly into each <br>article, started with the help of AI.</p>
+                </div>
+                <div class="right flex flex-wrap   w-[50%] gap-1 content-start space-y-2">
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Marketing</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Public Administration</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>HelthCare</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Engineering</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>IT Services</p>
+                        </div>
+                    </div>
+
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Sustainaiblity</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Business Administration</p>
+                        </div>
+                    </div>
+
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Telecomunnications</p>
+                        </div>
+                    </div>
+                    <div class="links w-auto">
+                        <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                            <p>Hr Managment</p>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="flex justify-center w-screen mt-8 h-[350px]">
+        <div class="cont flex w-[90%]  h-[200px] ">
+            <div class="left w-[500px]">
+                <h1 class="text-5xl font-extralight space-y-3">Find the right job or internship for you</h1>
+                
+            </div>
+            <div class="right flex flex-wrap items-center  w-[50%] gap-1 content-start space-y-2">
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Marketing</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Public Administration</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>HelthCare</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Engineering</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>IT Services</p>
+                    </div>
+                </div>
+
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Sustainaiblity</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Business Administration</p>
+                    </div>
+                </div>
+
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Telecomunnications</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Hr Managment</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="pt bg-[#F1ECE5] flex justify-start gap-9 items-center pl-20 h-[250px]">
+        <div class="left">
+            <h1 class="text-amber-800 font-medium text-4xl">Post your job for millions <br>of people to see</h1>
+        </div>
+        <div class="right h-[200px] pt-20">
+            <a href="#ad-3" class="blue-border-button">Post a Job</a>
+
+        </div>
+    </div>
+    <div class="flex justify-center w-screen mt-8 h-[350px] ">
+        <div class="cont flex w-[90%] items-center gap-28 ">
+            <div class="left space-y-6">
+                <h1 class="text-5xl font-extralight space-y-3">Discover the best <br>software tools</h1>
+                <p class="text-xl font-thin space-y-3">Connect with buyers who have first-hand <br>experience to find the best products for you.</p>
+            </div>
+            <div class="right flex flex-wrap items-center  w-[50%] gap-1 content-start space-y-2">
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Marketing</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Public Administration</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>HelthCare</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Engineering</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>IT Services</p>
+                    </div>
+                </div>
+
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Sustainaiblity</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Business Administration</p>
+                    </div>
+                </div>
+
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Telecomunnications</p>
+                    </div>
+                </div>
+                <div class="links w-auto">
+                    <div class="itm rounded-full border text-center hover:bg-slate-100 w-auto py-2 px-6 ">
+                        <p>Hr Managment</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="pt bg-[#F1ECE5] flex justify-start gap-20 items-center pl-20 py-7 h-screen">
+        <div class="left w-[600px] space-y-10">
+            <h1 class="text-amber-800 font-medium text-5xl">Let the right people know you’re open to work</h1>
+            <p class="text-4xl font-thin space-y-3">With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.</p>
+        </div>
+        <div class="right">
+            <img class="w-[450px]" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgU2oO9fAOmTBPWVEGc5t8rlP7bUAlWI7KdzjVh-_DwbEAuOWUxtgm-OHZ1nnw3Xkx6B_FnwgSFDihWmlN-Q-qKI1VUw_5RsUriYgFyoDwvXW2zLSm-SAJykQlPJvomwVHhpYv1eIFGlk2QdaRyGI1VhEfJSCkQ72BEeSwmwMHPZ58B9dE5WNJ1UhTtjl4/s320/dbvmk0tsk0o0hd59fi64z3own.png" alt="" class="w-[450px] h-[300px]">
+        </div>
+    </div>
+
+    <div class="img flex gap-32 justify-start pl-40 pt-64 pb-64">
+        <div class="1 flex-col space-y-20">
+            <img class="w-[400px]" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEsupw5yQinxntR966CrK5S-4IZ_csXCs1Y4UNqAqSzQjULncAX9ke-hVk10_ZFvnlPjYQwSqrqs8xmcFw9lLgBhFgV_h5qWgAiMfEvCc_x-EImp1Xo7U59TJ3ckhUKH122ouFUfvlkZiCvoklyTZ93o9v7WjVnZwhS1x6_d8tp2Ktw10MSQuIRURFBfk/s320/lin1.jpg" alt="">
+            <h1 class="text-5xl">Connect with people <br> who can help</h1>
+            <div class="btn p-4 border rounded-3xl">
+                Find People You Know
+            </div>
+
+
+        </div>
+        <div class="2 flex-col space-y-20">
+            <img class="w-[400px] " src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLA4qkYAOUN5AkpDShxa_os9jdjg2u7nv1Dp7ufRbYqA1NFRpNUzsH9ApFFkRs4vaeDcGyQxP4PdguqBUYx_C77kO521QnjljsTC8yr43G8J3CqqrPIEI2tgAD8ANwyG0fMloiWxKD11F1IcZ1BlxqO87AyVBbW6JqoCYMZ2Iu6fQ6W7S_hs3JstaIA10/s320/lin.jpg" alt="">
+            
+            <h1 class="text-5xl hover:bg-slate-50">Learn the skills you <br>need to succeed</h1>
+            <div class="btn p-4 border rounded-md hover:bg-slate-50">
+                Choose a topic to learn about
+            </div>
+
+        </div>
+    </div>
+    <div class="bgcircle flex h-[840px] items-center ">
+        <div class="txt bg-[#F3F2F0] h-[650px] w-[50%]  space-y-5 ">
+            <div class="con space-y-5 absolute left-44 pt-32">
+                <h1 class="text-amber-800 font-medium text-5xl ">Who is LinkedIn for?</h1>
+                <h2 class="text-4xl font-thin space-y-3">Anyone looking to navigate their <br>professional life.</h2>
+                <div class="b p-4 border  w-[75%] bg-[#E1DAD0] opacity-70 hover:opacity-100"> Find a coworker or classmate</div>
+                <div class="b1 p-4 border w-[75%] bg-[#E1DAD0] opacity-70 hover:opacity-100 ">Find a new job</div>
+                <div class="b1 p-4 border w-[75%]  bg-[#E1DAD0] opacity-70 hover:opacity-100">Finfd a course or training</div></div>
+        </div>
+        <div class="con absolute -right-52">
+            <img class="h-[840px] text-slate-700" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiiDP-wx4bnD-6AFYy2oSA47fzElenxjI9_KguMQ48ggsRxVBPm7H3psUz-a-DQQcqBmebWf0YSXbA9rfHhu6NCw_nFXZZmknFvJIjGAUy-dxxcJC8sionbg3L5T2bbjb_L_LemSJSy04Gff6PZa_tk4LQGePs00lhkEUzyuD3I3IV_9_JcDljlwP6NtU/s320/bigcir.jpeg" alt="">
+        </div>
+    </div>
+    <div class="blu flex w-screen mt-16 items-center justify-end ">
+        <div class="yt absolute left-60 object-cover rounded-md">
+            <iframe width="560" height="355" class="rounded-md" src="https://www.youtube.com/embed/IlYUUN8rL_Y?si=IA6JL6txN14MyV50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </div>
+        <div class="colr bg-[#F4FAFE] h-[650px] w-[60%] flex justify-center items-center">
+            <div class="left w-[600px] space-y-10 absolute right-0">
+                <h1 class="text-amber-800 font-medium text-5xl">In it to chase my dream</h1>
+                <p class="text-5xl font-thin space-y-3">Check out Gayatri’s story of <br> finding a new job on LinkedIn</p>
+                 
+            </div>
+
+        </div>
+    </div>
+    <div class="foot mt-28">
+        <section id="ad-8" class="absolute  pt-20 pl-64">
+            <div class="container ad-8-container space-y-5">
+                <h2 class="ad-8-heading font-light text-5xl">Join your colleagues, classmates, and friends on LinkedIn.</h2>
+                <button class="blue-button ad-8-btn">Get Started</button>
+            </div>
+        </section>
+        
+        <img class="w-screen h-[650px]" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg63-tBwA2G9vZ4cExUDVSqxMgosbfcSQ0mz_C89aaTlOn82cbP09y1HnFhHmZvwjlh24AdzUhvMxzp5afsrJokc0VbI6dyzxjVig6I3LpcyXp7PNmRSOVFz2BFfFDsPouoa6lBsXL3uGBnVykBNuzdCGwkD7HupEGENrS1p6KBf20fdWkGMi9jZbsHi1g/w573-h314/footer%20banner%20(1).png" alt="">
+        
+    </div>
+    <footer>
+        <section id="footer-1">
+            <div class="container flex footer-1-container">
+                <div id="f1-icon">
+                    <icon class="footer-1-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            preserveAspectRatio="xMinYMin meet" version="1.1" focusable="false" aria-busy="false">
+                            <g class="scaling-icon" style="fill-opacity: 1">
+                                <defs>
+                                </defs>
+                                <g class="logo-21dp">
+                                    <g class="dpi-1">
+                                        <g class="inbug" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <path
+                                                d="M19.479,0 L1.583,0 C0.727,0 0,0.677 0,1.511 L0,19.488 C0,20.323 0.477,21 1.333,21 L19.229,21 C20.086,21 21,20.323 21,19.488 L21,1.511 C21,0.677 20.336,0 19.479,0"
+                                                class="bug-text-color" transform="translate(63.000000, 0.000000)">
+                                            </path>
+                                            <path
+                                                d="M82.479,0 L64.583,0 C63.727,0 63,0.677 63,1.511 L63,19.488 C63,20.323 63.477,21 64.333,21 L82.229,21 C83.086,21 84,20.323 84,19.488 L84,1.511 C84,0.677 83.336,0 82.479,0 Z M71,8 L73.827,8 L73.827,9.441 L73.858,9.441 C74.289,8.664 75.562,7.875 77.136,7.875 C80.157,7.875 81,9.479 81,12.45 L81,18 L78,18 L78,12.997 C78,11.667 77.469,10.5 76.227,10.5 C74.719,10.5 74,11.521 74,13.197 L74,18 L71,18 L71,8 Z M66,18 L69,18 L69,8 L66,8 L66,18 Z M69.375,4.5 C69.375,5.536 68.536,6.375 67.5,6.375 C66.464,6.375 65.625,5.536 65.625,4.5 C65.625,3.464 66.464,2.625 67.5,2.625 C68.536,2.625 69.375,3.464 69.375,4.5 Z"
+                                                class="background" fill="currentColor"></path>
+                                        </g>
+                                        <g class="linkedin-text">
+                                            <path
+                                                d="M60,18 L57.2,18 L57.2,16.809 L57.17,16.809 C56.547,17.531 55.465,18.125 53.631,18.125 C51.131,18.125 48.978,16.244 48.978,13.011 C48.978,9.931 51.1,7.875 53.725,7.875 C55.35,7.875 56.359,8.453 56.97,9.191 L57,9.191 L57,3 L60,3 L60,18 Z M54.479,10.125 C52.764,10.125 51.8,11.348 51.8,12.974 C51.8,14.601 52.764,15.875 54.479,15.875 C56.196,15.875 57.2,14.634 57.2,12.974 C57.2,11.268 56.196,10.125 54.479,10.125 L54.479,10.125 Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M47.6611,16.3889 C46.9531,17.3059 45.4951,18.1249 43.1411,18.1249 C40.0001,18.1249 38.0001,16.0459 38.0001,12.7779 C38.0001,9.8749 39.8121,7.8749 43.2291,7.8749 C46.1801,7.8749 48.0001,9.8129 48.0001,13.2219 C48.0001,13.5629 47.9451,13.8999 47.9451,13.8999 L40.8311,13.8999 L40.8481,14.2089 C41.0451,15.0709 41.6961,16.1249 43.1901,16.1249 C44.4941,16.1249 45.3881,15.4239 45.7921,14.8749 L47.6611,16.3889 Z M45.1131,11.9999 C45.1331,10.9449 44.3591,9.8749 43.1391,9.8749 C41.6871,9.8749 40.9121,11.0089 40.8311,11.9999 L45.1131,11.9999 Z"
+                                                fill="currentColor"></path>
+                                            <polygon fill="currentColor"
+                                                points="38 8 34.5 8 31 12 31 3 28 3 28 18 31 18 31 13 34.699 18 38.241 18 34 12.533">
+                                            </polygon>
+                                            <path
+                                                d="M16,8 L18.827,8 L18.827,9.441 L18.858,9.441 C19.289,8.664 20.562,7.875 22.136,7.875 C25.157,7.875 26,9.792 26,12.45 L26,18 L23,18 L23,12.997 C23,11.525 22.469,10.5 21.227,10.5 C19.719,10.5 19,11.694 19,13.197 L19,18 L16,18 L16,8 Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M11,18 L14,18 L14,8 L11,8 L11,18 Z M12.501,6.3 C13.495,6.3 14.3,5.494 14.3,4.5 C14.3,3.506 13.495,2.7 12.501,2.7 C11.508,2.7 10.7,3.506 10.7,4.5 C10.7,5.494 11.508,6.3 12.501,6.3 Z"
+                                                fill="currentColor"></path>
+                                            <polygon fill="currentColor" points="3 3 0 3 0 18 9 18 9 15 3 15"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </icon>
+                </div>
+                <div id="footer-list-1">
+                    <h3 class="footer-list-heading">General</h3>
+                    <ul class="footer-list flex">
+                        <li><a href="#f">Sign Up</a></li>
+                        <li><a href="#f">Help Center</a></li>
+                        <li><a href="#f">About</a></li>
+                        <li><a href="#f">Press</a></li>
+                        <li><a href="#f">Blog</a></li>
+                        <li><a href="#f">Careers</a></li>
+                        <li><a href="#f">Developers</a></li>
+                    </ul>
+                </div>
+                <div id="footer-list-2">
+                    <h3 class="footer-list-heading">Browse LinkedIn</h3>
+                    <ul class="footer-list flex">
+                        <li><a href="#g">Learning</a></li>
+                        <li><a href="#g">Jobs</a></li>
+                        <li><a href="#g">Salary</a></li>
+                        <li><a href="#g">Mobile</a></li>
+                        <li><a href="#g">Services</a></li>
+                        <li><a href="#g">Products</a></li>
+                    </ul>
+                </div>
+                <div id="footer-list-3">
+                    <h3 class="footer-list-heading">Business Solutions</h3>
+                    <ul class="footer-list flex">
+                        <li><a href="#r">Talent</a></li>
+                        <li><a href="#r">Marketing</a></li>
+                        <li><a href="#r">Sales</a></li>
+                        <li><a href="#r">Learning</a></li>
+                    </ul>
+                </div>
+                <div id="footer-list-4">
+                    <h3 class="footer-list-heading">Directories</h3>
+                    <ul class="footer-list flex">
+                        <li><a href="#d">Members</a></li>
+                        <li><a href="#d">Jobs</a></li>
+                        <li><a href="#d">Companies</a></li>
+                        <li><a href="#d">Featured</a></li>
+                        <li><a href="#d">Learning</a></li>
+                        <li><a href="#d">Posts</a></li>
+                        <li><a href="#d">Articles</a></li>
+                        <li><a href="#d">Schools</a></li>
+                        <li><a href="#d">News</a></li>
+                        <li><a href="#d">News Letters</a></li>
+                        <li><a href="#d">Services</a></li>
+                        <li><a href="#d">Products</a></li>
+                        <li><a href="#d">Advice</a></li>
+                        <li><a href="#d">People Search</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="footer-2">
+            <div class="container footer-2-container">
+                <ul class="footer-2-list flex">
+                    <li class="f2-icon flex">
+                        <icon class="footer-2-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 56 14" preserveAspectRatio="xMinYMin meet" version="1.1" fill="CurrentColor"
+                                focusable="false" class="lazy-loaded" aria-busy="false">
+                                <g class="inbug" fill-rule="evenodd">
+                                    <path
+                                        d="M14,1.25 L14,12.75 C14,13.44 13.44,14 12.75,14 L1.25,14 C0.56,14 0,13.44 0,12.75 L0,1.25 C0,0.56 0.56,0 1.25,0 L12.75,0 C13.44,0 14,0.56 14,1.25"
+                                        class="bug-text-color" fill="transparent" transform="translate(42.000000, 0.000000)">
+                                    </path>
+                                    <path
+                                        d="M56,1.25 L56,12.75 C56,13.44 55.44,14 54.75,14 L43.25,14 C42.56,14 42,13.44 42,12.75 L42,1.25 C42,0.56 42.56,0 43.25,0 L54.75,0 C55.44,0 56,0.56 56,1.25 Z M47,5 L48.85,5 L48.85,6.016 L48.893,6.016 C49.259,5.541 50.018,4.938 51.25,4.938 C53.125,4.938 54,5.808 54,8 L54,12 L52,12 L52,8.75 C52,7.313 51.672,6.875 50.632,6.875 C49.5,6.875 49,7.75 49,9 L49,12 L47,12 L47,5 Z M44,12 L46,12 L46,5 L44,5 L44,12 Z M46.335,3 C46.335,3.737 45.737,4.335 45,4.335 C44.263,4.335 43.665,3.737 43.665,3 C43.665,2.263 44.263,1.665 45,1.665 C45.737,1.665 46.335,2.263 46.335,3 Z"
+                                        class="background"></path>
+                                </g>
+                                <g class="linkedin-text">
+                                    <path
+                                        d="M40,12 L38.107,12 L38.107,11.1 L38.077,11.1 C37.847,11.518 37.125,12.062 36.167,12.062 C34.174,12.062 33,10.521 33,8.5 C33,6.479 34.291,4.938 36.2,4.938 C36.971,4.938 37.687,5.332 37.97,5.698 L38,5.698 L38,2 L40,2 L40,12 Z M36.475,6.75 C35.517,6.75 34.875,7.49 34.875,8.5 C34.875,9.51 35.529,10.25 36.475,10.25 C37.422,10.25 38.125,9.609 38.125,8.5 C38.125,7.406 37.433,6.75 36.475,6.75 L36.475,6.75 Z">
+                                    </path>
+                                    <path
+                                        d="M31.7628,10.8217 C31.0968,11.5887 29.9308,12.0627 28.4998,12.0627 C26.3388,12.0627 24.9998,10.6867 24.9998,8.4477 C24.9998,6.3937 26.4328,4.9377 28.6578,4.9377 C30.6758,4.9377 31.9998,6.3497 31.9998,8.6527 C31.9998,8.8457 31.9708,8.9997 31.9708,8.9997 L26.8228,8.9997 L26.8348,9.1487 C26.9538,9.8197 27.6008,10.5797 28.6358,10.5797 C29.6528,10.5797 30.2068,10.1567 30.4718,9.8587 L31.7628,10.8217 Z M30.2268,7.9047 C30.2268,7.0627 29.5848,6.4297 28.6508,6.4297 C27.6058,6.4297 26.9368,7.0597 26.8728,7.9047 L30.2268,7.9047 Z">
+                                    </path>
+                                    <polygon
+                                        points="18 2 20 2 20 7.882 22.546 5 25 5 21.9 8.199 24.889 12 22.546 12 20 8.515 20 12 18 12">
+                                    </polygon>
+                                    <path
+                                        d="M10,5 L11.85,5 L11.85,5.906 L11.893,5.906 C12.283,5.434 13.031,4.938 14.14,4.938 C16.266,4.938 17,6.094 17,8.285 L17,12 L15,12 L15,8.73 C15,7.943 14.821,6.75 13.659,6.75 C12.482,6.75 12,7.844 12,8.73 L12,12 L10,12 L10,5 Z">
+                                    </path>
+                                    <path
+                                        d="M7,12 L9,12 L9,5 L7,5 L7,12 Z M8,1.75 C8.659,1.75 9.25,2.341 9.25,3 C9.25,3.659 8.659,4.25 8,4.25 C7.34,4.25 6.75,3.659 6.75,3 C6.75,2.341 7.34,1.75 8,1.75 L8,1.75 Z">
+                                    </path>
+                                    <polygon points="0 2 2 2 2 10 6 10 6 12 0 12"></polygon>
+                                </g>
+                            </svg>
+                        </icon>
+                        <span>© 2023</span>
+                    </li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Accessibilty</a></li>
+                    <li><a href="">User Agreement</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                    <li><a href="">Copyright Policy</a></li>
+                    <li><a href="">Brand Policy</a></li>
+                    <li><a href="">Guest Controls</a></li>
+                    <li><a href="">Community Guidelines</a></li>
+                    <li><a href="">Language</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+
+</html>
