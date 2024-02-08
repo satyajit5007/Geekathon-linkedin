@@ -5,81 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>linkedin clone</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem 4rem;
+    background: #fff;
+}
+
+nav .wrapper .left,
+nav .wrapper .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .wrapper .left{
+    padding-left: 3rem;
+    display: flex;
+    gap: 0.7rem;
+}
+
+nav .wrapper .logo i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #0a66c2;
+}
+
+nav .wrapper .left .input{
+    background: rgb(237, 245, 246);
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+nav .wrapper .left .input input[type='search']{
+    width: 15rem;
+    border: none;
+    background: transparent;
+}
+
+nav .wrapper .left .input input[type='search']::placeholder{
+    font-size: 0.8rem;
+    color: rgb(49, 49, 49);
+    font-weight: 100;
+}
+
+nav .wrapper .left .input i{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .me,
+nav .wrapper .right .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+nav .wrapper .right .home,
+nav .wrapper .right .network:hover,
+nav .wrapper .right .jobs:hover,
+nav .wrapper .right .message:hover,
+nav .wrapper .right .notification:hover,
+nav .wrapper .right .me .down:hover,
+nav .wrapper .right .work .down:hover{
+    color: #000;
+}
+
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .work{
+    color: gray;
+}
+
+nav .wrapper .right .home i,
+nav .wrapper .right .network i,
+nav .wrapper .right .jobs i,
+nav .wrapper .right .message i,
+nav .wrapper .right .notification i{
+    font-size: 1.2rem;
+}
+
+
+nav .wrapper .right .me .down,
+nav .wrapper .right .work .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: gray;
+}
+nav .wrapper .right .me i:first-child{
+    background: gray;
+    color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+    color: gray;
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+    </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="navbar-left">
-        <a href="index.html" class="logo"><img src="images/logo.png" ></a>
-
-        <div class="search-box">
-            <img src="images/search.png" alt="">
-            <input type="text" placeholder="Search">
-        </div>
-
-    </div>
-
-    <div class="navbar-center">
-        <ul>
-            <li><a href="#" class="active-link"><img src="images/home.png" ><span>Home</span></a></li>
-            <li><a href="#"><img src="images/network.png" ><span>My Network</span></a></li>
-            <li><a href="#"><img src="images/jobs.png" ><span>Jobs</span></a></li>
-            <li><a href="#"><img src="images/message.png" ><span>Messaging</span></a></li>
-            <li><a href="#"><img src="images/notification.png" ><span>Notifications</span></a></li>
-        </ul>
-    </div>
-    <div class="navbar-right">
-        <div class="online">
-            <img src="images/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
-        </div>
-    </div>
-
-
-    <!-- PROFILE MENU  drop down -->
-
-<div class="profile-menu-wrap" id="profileMenu">
-    <div class="profile-menu">
-        <div class="user-info">
-            <img src="images/user-1.png" alt="">
-            <div>
-                <h3>Rayan Walton</h3>
-                <a href="#">See your profile</a>
+    <nav class="">
+        <div class="wrapper">
+          <div class="left">
+            <div class="logo">
+              <i class="fa-brands fa-linkedin"></i>
             </div>
+            <div class="input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="search"
+                placeholder="Search for job, Skills & Companies..."
+              />
+            </div>
+          </div>
+          <div class="right">
+            <div class="home">
+              <i class="fa-solid fa-house"></i>
+              <button onclick="window.location.href='#';">Home</button>
+            </div>
+            <div class="network">
+              <i class="fa-solid fa-user-group"></i>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/myNetwork';">My Network</button>
+            </div>
+            <div class="jobs">
+              <i class="fa-solid fa-suitcase"></i>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/jobs';">Jobs</button>
+            </div>
+            <div class="message">
+              <i class="fa-solid fa-message"></i>
+              <button onclick="window.location.href='https://nikhil-kiet.github.io/Geekathon-linkedin/adarsh/messaging';">Messaging</button>
+            </div>
+            <div class="notification">
+              <i class="fa-solid fa-bell"></i>
+              <button onclick="window.location.href='#';">Notifications</button>
+            </div>
+            <div class="me">
+              <i class="fa-solid fa-user"></i>
+              <div class="down">
+                <button onclick="window.location.href='#';">Me</button>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <div class="work">
+              <i class="fa-solid fa-braille"></i>
+              <div class="down">
+                <button onclick="window.location.href='#';">Work</button>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+            </div>
+            <a href="#">Try Premium for free</a>
+          </div>
         </div>
-        <hr>
-
-        <a href="#" class="profile-menu-link">
-            <img src="images/feedback.png" alt="">
-            <p>Give Feedback</p>
-            <span>></span>
-        </a>
-        <a href="#" class="profile-menu-link">
-            <img src="images/setting.png" alt="">
-            <p>Settings & Privacy</p>
-            <span>></span>
-        </a>
-        <a href="#" class="profile-menu-link">
-            <img src="images/help.png" alt="">
-            <p>Help & Support</p>
-            <span>></span>
-        </a>
-        <a href="#" class="profile-menu-link">
-            <img src="images/display.png" alt="">
-            <p>Display & Accessibilty</p>
-            <span>></span>
-        </a>
-        <a href="#" class="profile-menu-link">
-            <img src="images/logout.png" alt="">
-            <p>logout</p>
-            <span>></span>
-        </a>
-
-    </div>
-</div>
-
-
-</nav>
-
+      </nav>
  <!----------------------------------------------------------navbar close  ---------------------------------------------------------->
 
 <div class="container">
